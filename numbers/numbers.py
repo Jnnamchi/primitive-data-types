@@ -146,6 +146,42 @@ scorePercentage = None
 
 
 
+########################################################################
+#
+#  EXERCISE 10 - Add number to string
+#
+#  Add the number in variable 'score' to the end of the string variable
+#  'messagePrefix' and save it into the variable 'scoreMessage'
+messagePrefix = "You got a score of"
+score = 145
+#
+###################### YOUR CODE BELOW THIS LINE ######################
+
+scoreMessage = None
+
+########################################################################
+
+
+
+########################################################################
+#
+#  EXERCISE 9 - Parse float from string
+#
+#  Parse the number from string variable 'parseTheNumber' and save it into
+#  'parsedNumber' which should be of number data type
+parseTheNumber = "Prerequisite score of 50.5 is required to pass"
+#  NOTE: You will need to use the imported regular expression module 're'
+#  imported below for you
+import re
+#
+###################### YOUR CODE BELOW THIS LINE ######################
+
+parsedNumber = None
+
+########################################################################
+
+
+
 ####################### END OF STRINGS EXERCISES #######################
 
 
@@ -275,7 +311,29 @@ elif scorePercentage == correctScorePercentage:
   print(correctMsg + "The percentage of 'scoreValue' out of 'maxValue' to 3 decimal places you got was " + str(scorePercentage))
   passedTests+= 1
 else:
-  print(incorrectMsg + "The percentage of 'scoreValue' out of 'maxValue' to 3 decimal placesshould be " + str(correctScorePercentage) + " but you got " + str(scorePercentage))
+  print(incorrectMsg + "The percentage of 'scoreValue' out of 'maxValue' to 3 decimal places should be " + str(correctScorePercentage) + " but you got " + str(scorePercentage))
+totalTests += 1
+
+# Add number to string
+correctScoreMessage =  messagePrefix + " " + str(score)
+if scoreMessage == None:
+  print(incorrectMsg + "The 'scoreMessage' variable should be defined")
+elif scoreMessage == correctScoreMessage:
+  print(correctMsg + "The value of 'scoreMessage' you got was " + scoreMessage)
+  passedTests+= 1
+else:
+  print(incorrectMsg + "The value of 'scoreMessage' should be " + correctScoreMessage + " but you got " + scoreMessage)
+totalTests += 1
+
+# Parse number from string
+correctParsedNumber = float(re.sub(r'[^0-9.]', "", parseTheNumber))
+if parsedNumber == None:
+  print(incorrectMsg + "The 'parsedNumber' variable should be defined")
+elif parsedNumber == correctParsedNumber:
+  print(correctMsg + "The value of 'parsedNumber' you got was " + str(parsedNumber))
+  passedTests+= 1
+else:
+  print(incorrectMsg + "The value of 'parsedNumber' should be " + str(correctParsedNumber) + " of type " + str(type(correctParsedNumber)) + " but you got " + str(parsedNumber)  + " of type " + str(type(parsedNumber)))
 totalTests += 1
 
 # Final Test Tally Determination
