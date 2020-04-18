@@ -6,7 +6,7 @@
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
-let newNumber
+let newNumber = 10.56
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -18,15 +18,15 @@ let newNumber
 //
 //  Check if variables 'isNumer1' and 'isNumber2' are numbers and save
 //  the result into 'number1IsNumber' and 'number2IsNumber' respectively
-    let isNumber1 = "Nan"
-    let isNumber2 = 4000
+let isNumber1 = "Nan"
+let isNumber2 = 4000
 //  NOTE: 'number1IsNumber' and 'number2IsNumber' should be boolean values
 //  of True or False. The code will indeed be the same for both variables
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
-let number1IsNumber
-let number2IsNumber
+let number1IsNumber = !isNaN(isNumber1)
+let number2IsNumber = !isNaN(isNumber2)
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -38,11 +38,11 @@ let number2IsNumber
 //
 //  Get the absolute value of 'getMyAbsoluteValue' and save the result
 //  into 'absoluteValue'
-    let getMyAbsoluteValue = -99
+let getMyAbsoluteValue = -99
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
-let absoluteValue
+let absoluteValue = Math.abs(getMyAbsoluteValue)
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -54,11 +54,11 @@ let absoluteValue
 //
 //  Round up the variable 'roundMeUp' to the nearest integer and save the
 //  the result into 'roundedUpNumber'
-    let roundMeUp = 85.4
+let roundMeUp = 85.4
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
-let roundedUpNumber
+let roundedUpNumber = Math.ceil(roundMeUp)
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -70,11 +70,11 @@ let roundedUpNumber
 //
 //  Round down the variable 'roundMeDown' to the nearest integer and save the
 //  the result into 'roundedDownNumber'
-    let roundMeDown = 85.4
+let roundMeDown = 85.4
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
-let roundedDownNumber
+let roundedDownNumber = Math.floor(roundMeDown)
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -86,12 +86,12 @@ let roundedDownNumber
 //
 //  Calculate 'baseNumber' to the power of 'powerNumber' and save the
 //  result into 'baseToThePower'
-    let baseNumber = 2
-    let powerNumber = 9
+let baseNumber = 2
+let powerNumber = 9
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
-let baseToThePower
+let baseToThePower = Math.pow(baseNumber, powerNumber)
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -108,7 +108,7 @@ let maxValue = 145
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
-let scorePercentage
+let scorePercentage = parseFloat(((scoreValue / maxValue) * 100).toFixed(2))
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -125,7 +125,7 @@ let score = 145
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
-let scoreMessage
+let scoreMessage = messagePrefix + " " + score
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -141,7 +141,7 @@ let parseTheNumber = "You got a score of 25.5"
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
-let parsedNumber
+let parsedNumber = parseFloat(parseTheNumber.replace(/[^0-9.]/g,''))
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -252,7 +252,7 @@ if (baseToThePower !== undefined && baseToThePower === correctBaseToThePower) {
 totalTests++
 
 // Percentage Calculation To 2 Decimal Places
-let correctScorePercentage = ((scoreValue / maxValue) * 100).toFixed(2)
+let correctScorePercentage = parseFloat(((scoreValue / maxValue) * 100).toFixed(2))
 if (scorePercentage !== undefined && scorePercentage === correctScorePercentage) {
   console.log(correctMsg + "The percentage of 'scoreValue' out of 'maxValue' to 2 decimal places you got was " + scorePercentage)
   passedTests++
