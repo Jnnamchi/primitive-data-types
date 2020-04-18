@@ -6,7 +6,7 @@
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-newString = None
+newString = "New string"
 
 ########################################################################
 
@@ -22,7 +22,7 @@ getMyDataType = "This is a string"
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-gotDataType = None
+gotDataType = type(getMyDataType)
 
 ########################################################################
 
@@ -39,7 +39,7 @@ getMyLenght = "Get the length of this string"
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-myLength = None
+myLength = len(getMyLenght)
 
 ########################################################################
 
@@ -58,7 +58,7 @@ concat3 = "father!"
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-concatStrings = None
+concatStrings = concat1 + concat2 + concat3
 
 ########################################################################
 
@@ -78,7 +78,7 @@ repeatMe = "Let it snow! "
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-repeatedString = None
+repeatedString = repeatMe*repeatTimes
 
 ########################################################################
 
@@ -96,7 +96,7 @@ subString = "out"
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-stringContains = None
+stringContains = subString in mainString
 
 ########################################################################
 
@@ -114,7 +114,7 @@ subStringToFind = "best"
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-foundSubstringIndex = None
+foundSubstringIndex = findSubstring.find(subStringToFind)
 
 ########################################################################
 
@@ -130,7 +130,7 @@ getFirstCharacter = "You need my first character"
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-firstCharacter = None
+firstCharacter = getFirstCharacter[0]
 
 ########################################################################
 
@@ -146,7 +146,7 @@ getFirstSevenCharacters = "You need my first seven characters"
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-firstSevenCharacters = None
+firstSevenCharacters = getFirstSevenCharacters[:7]
 
 ########################################################################
 
@@ -162,7 +162,7 @@ getLastCharacter = "You need my last character don't ya?"
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-lastCharacter = None
+lastCharacter = getLastCharacter[-1]
 
 ########################################################################
 
@@ -178,7 +178,7 @@ getLastFourCharacters = "You need my last four characters don't ya?"
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-lastFourCharacters = None
+lastFourCharacters = getLastFourCharacters[-4:]
 
 ########################################################################
 
@@ -196,7 +196,7 @@ checkEquality2 = "Are we equal?"
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-stringsAreEqual = None
+stringsAreEqual = checkEquality1 == checkEquality2
 
 ########################################################################
 
@@ -214,7 +214,7 @@ checkEqualityIgnoreCase2 = "are we EQUAL?"
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-stringsAreEqualIgnoreCase = None
+stringsAreEqualIgnoreCase = checkEqualityIgnoreCase1.lower() == checkEqualityIgnoreCase2.lower()
 
 ########################################################################
 
@@ -230,7 +230,7 @@ replaceMe = "John just moved to Montreal. John will be meeting his roomate soon.
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-replacedString = None
+replacedString = replaceMe.replace("John", "Michael")
 
 ########################################################################
 
@@ -247,7 +247,7 @@ removeMe = "We will going to be leaving at noon sharp."
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-removedString = None
+removedString = removeMe.replace("going to ", "")
 
 ########################################################################
 
@@ -260,7 +260,7 @@ removedString = None
 #  Turn 'testString1':
 testString1 = "The quick brown fox jumps over the lazy dog"
 #  into 'targetString1':
-targetString1 = "THE-QUICK-BROWN-FOX-JUMPS-OVER-THE-LAZY-BLUE-DOG"
+targetString1 = "THE-QUICK-BROWN-FOX-JUMPS-OVER-THE-LAZY-DOG"
 #  NOTE: Unlike javascript, python strings are immutable, changing a
 #  string requires you to save the changed string into a new variable
 #  simply do testString1 = testString1[:] etc to update the testString1
@@ -268,7 +268,7 @@ targetString1 = "THE-QUICK-BROWN-FOX-JUMPS-OVER-THE-LAZY-BLUE-DOG"
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-
+testString1 = testString1.upper().replace(" ", "-")
 
 ########################################################################
 
@@ -289,7 +289,7 @@ targetString2 = "i am the second best, you are the first best!"
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-testString2 = None
+testString2 = testString2.lower().replace("first sentence.", "second best,").replace("second sentence", "first best!")
 
 ########################################################################
 
@@ -466,10 +466,10 @@ correctStringEqualsIgnoreCase = checkEqualityIgnoreCase1.upper() == checkEqualit
 if stringsAreEqualIgnoreCase == None:
   print(incorrectMsg + "The 'stringsAreEqualIgnoreCase' variable should be defined")
 elif stringsAreEqualIgnoreCase == correctStringEqualsIgnoreCase:
-  print(correctMsg + "As for strings 'checkEqualityIgnoreCase1' and 'checkEqualityIgnoreCase2' being equal ignoring case, you said this was: " + stringsAreEqualIgnoreCase)
+  print(correctMsg + "As for strings 'checkEqualityIgnoreCase1' and 'checkEqualityIgnoreCase2' being equal ignoring case, you said this was: " + str(stringsAreEqualIgnoreCase))
   passedTests+= 1
 else:
-  print(incorrectMsg + "As for strings 'checkEqualityIgnoreCase1' and 'checkEqualityIgnoreCase2' being equal ignoring case, this should be " + correctStringEqualsIgnoreCase + " but you got " + stringsAreEqualIgnoreCase)
+  print(incorrectMsg + "As for strings 'checkEqualityIgnoreCase1' and 'checkEqualityIgnoreCase2' being equal ignoring case, this should be " + str(correctStringEqualsIgnoreCase) + " but you got " + str(stringsAreEqualIgnoreCase))
 totalTests += 1
 
 # String Replace
