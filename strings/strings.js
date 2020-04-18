@@ -189,7 +189,7 @@ let stringsAreEqual = checkEquality1 === checkEquality2
 //  Determine if strings 'checkEqualityIgnoreCase1' and 'checkEqualityIgnoreCase2'
 //  are equal, ignoring case, and save the result into 'stringsAreEqualIgnoreCase'
 let checkEqualityIgnoreCase1 = "Are we equal?"
-let checkEqualityIgnoreCase2 = "are we EQUAL?"
+let checkEqualityIgnoreCase2 = "are WE EQUAL?"
 //  NOTE: 'stringsAreEqualIgnoreCase' should be a boolean value of True or False
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
