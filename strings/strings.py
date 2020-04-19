@@ -261,7 +261,7 @@ removedString = removeMe.replace("going to ", "")
 testString1 = "The quick brown fox jumps over the lazy dog"
 #  into 'targetString1':
 targetString1 = "THE-QUICK-BROWN-FOX-JUMPS-OVER-THE-LAZY-DOG"
-#  NOTE: Unlike javascript, python strings are immutable, changing a
+#  NOTE: Like javascript, python strings are immutable, changing a
 #  string requires you to save the changed string into a new variable
 #  simply do testString1 = testString1[:] etc to update the testString1
 #  variable - feel free to do this in multiple steps
@@ -282,7 +282,7 @@ testString1 = testString1.upper().replace(" ", "-")
 testString2 = "I am the first sentence. You are the second sentence"
 #  into 'targetString2':
 targetString2 = "i am the second best, you are the first best!"
-#  NOTE: Unlike javascript, python strings are immutable, changing a
+#  NOTE: Like javascript, python strings are immutable, changing a
 #  string requires you to save the changed string into a new variable
 #  simply do testString2 = testString2[:] etc to update the testString1
 #  variable - feel free to do this in multiple steps
