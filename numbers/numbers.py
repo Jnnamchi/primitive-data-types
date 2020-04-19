@@ -1,7 +1,3 @@
-# Some imports are necessary
-import math
-import time
-
 ########################################################################
 #
 #  EXERCISE 1 - INTEGER INITALIZATION
@@ -10,7 +6,7 @@ import time
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-newInteger = None
+newInteger = 10
 
 ########################################################################
 
@@ -24,7 +20,7 @@ newInteger = None
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-newFloat = None
+newFloat = 10.0
 
 ########################################################################
 
@@ -41,7 +37,7 @@ integer1 = "Not an integer"
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-integer1IsInteger = None
+integer1IsInteger = isinstance(integer1, int)
 
 ########################################################################
 
@@ -58,7 +54,7 @@ float1 = 45.6
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-float1IsFloat = None
+float1IsFloat = isinstance(float1, float)
 
 ########################################################################
 
@@ -74,7 +70,7 @@ getMyAbsoluteValue = -64.4
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-absoluteValue = None
+absoluteValue = abs(getMyAbsoluteValue)
 
 ########################################################################
 
@@ -87,10 +83,13 @@ absoluteValue = None
 #  Round up the variable 'roundMeUp' to the nearest integer and save the
 #  the result into 'roundedUpNumber'
 roundMeUp = 85.4
+#  NOTE: You will need to use the imported Mathematics module 'math' imported
+#  below for you
+import math
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-roundedUpNumber = None
+roundedUpNumber = math.ceil(roundMeUp)
 
 ########################################################################
 
@@ -103,10 +102,12 @@ roundedUpNumber = None
 #  Round down the variable 'roundMeDown' to the nearest integer and save the
 #  the result into 'roundedDownNumber'
 roundMeDown = 85.4
+#  NOTE: You will need to use the Mathematics module 'math' imported
+#  in the previous exercise for you
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-roundedDownNumber = None
+roundedDownNumber = math.floor(roundMeDown)
 
 ########################################################################
 
@@ -123,7 +124,7 @@ powerNumber = 5
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-baseToThePower = None
+baseToThePower = baseNumber**powerNumber
 
 ########################################################################
 
@@ -140,7 +141,7 @@ maxValue = 35
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-scorePercentage = None
+scorePercentage = round((scoreValue / maxValue) * 100, 3)
 
 ########################################################################
 
@@ -157,7 +158,7 @@ score = 145
 #
 ###################### YOUR CODE BELOW THIS LINE ######################
 
-scoreMessage = None
+scoreMessage = messagePrefix + " " + str(score)
 
 ########################################################################
 
@@ -165,7 +166,7 @@ scoreMessage = None
 
 ########################################################################
 #
-#  EXERCISE 9 - Parse float from string
+#  EXERCISE 11 - Parse float from string
 #
 #  Parse the number from string variable 'parseTheNumber' and save it into
 #  'parsedNumber' which should be of number data type
@@ -176,7 +177,7 @@ import re
 #
 ###################### YOUR CODE BELOW THIS LINE ######################
 
-parsedNumber = None
+parsedNumber = float(re.sub(r"[^0-9.]", "", parseTheNumber))
 
 ########################################################################
 
